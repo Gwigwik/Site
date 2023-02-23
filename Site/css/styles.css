@@ -1,0 +1,220 @@
+body {
+	margin: 0px 0px 0px 0px;
+	background-color: black;
+	font: 1em "Fira Sans", sans-serif;
+}
+
+/*--------------------------------------------------Header--------------------------------------------------*/
+#Header { /*Conteneur de la partie haute*/
+	background-color: white;
+	padding-top: 20px;
+	border-bottom: 3px solid;
+	border-color: black;
+}
+
+#HTitre { /*Titre du site*/
+	margin: 0px 0px 30px 0px;
+	font-size: 50px;
+	color: black;
+	text-align: center;
+}
+
+#Hul { /*Liste des liens*/
+	text-align: center;
+}
+
+#Hul div{ /*Conteneurs des liens de la liste*/
+	display: inline-block;
+	list-style-type: none; /*Enlever les points*/
+}
+
+#Hul li { /*Conteneur du lien de la liste*/
+	padding: 0px 20px 5px 20px;
+	text-align: center;
+}
+
+#Hul li a { /*Lien de la liste*/
+	text-decoration: none;
+	font-size: 35px;
+	color: black;
+}
+
+#Hul li a { /*Survolage lien de la liste*/
+	text-decoration: none;
+	font-size: 35px;
+	color: black;
+}
+
+#Hul li a:hover{ /*Survolage du lien de la liste*/
+	color: gray;
+}
+
+.colonne { /*Placement des traits séparant les liens de la liste*/
+	display: inline-block;
+	border-right-style: solid;
+	border-right-width: 3px;
+}
+
+/*--------------------------------------------------Menu--------------------------------------------------*/
+#MenuPrincipalI { /*Conteneur de la partie milieu index*/
+	height: 550px;
+	background-color: white;
+	border-top: 70px solid; /*Pour créer un espace d'écart*/
+	border-bottom: 70px solid;
+	border-color: white;
+	text-align: center;
+}
+
+#MenuPrincipalA { /*Conteneur de la partie milieu autres*/
+	height: 1350px;
+	background-color: white;
+	border-top: 70px solid; /*Pour créer un espace d'écart*/
+	border-bottom: 70px solid;
+	border-color: white;
+	text-align: center;
+}
+
+#MenuPrincipalC { /*Conteneur de la partie milieu contact*/
+	height: 500px;
+	background-color: white;
+	border-top: 70px solid; /*Pour créer un espace d'écart*/
+	border-bottom: 70px solid;
+	border-color: white;
+	text-align: center;
+}
+
+#MenuC { /*Conteneur de la partie milieu gauche*/
+	height: 470px;
+   width: 25%;
+   float: left;	
+   padding: 20px;
+}
+
+#Menu { /*Menu de la partie milieu gauche*/
+	background-color: silver;
+	font-size: 25px;
+	border: 7px solid;
+	border-radius: 15px;
+	border-color: white;
+	border: 2px solid;
+	width: 70%;
+	margin: auto;
+}
+
+#MAccueil { /*Texte accueil*/
+	text-decoration: none;
+	color: black;
+}
+
+#MAccueil:hover { /*Survolage texte accueil*/
+	color: gray;
+}
+
+#Menu a { /*Lien de la liste*/
+	text-decoration: none;
+	color: black;
+}
+
+#Menu a:hover { /*Survolage lien de la liste*/
+	color: gray;
+}
+
+#MContact { /*Texte contact*/
+	text-decoration: none;
+	color: black;
+	position: absolute;
+	bottom: 10px;
+	left: 0;
+	right: 0;
+}
+
+#MContact:hover { /*Survolage texte contact*/
+	color: gray;
+}
+
+/*--------------------------------------------------Partie principale--------------------------------------------------*/
+#Principal { /*Conteneur de la partie milieu droit*/
+	background-color: white;
+	font-size: 25px;
+   width: 60%;
+   float: left;
+}
+
+#Principal table { /*Tableau*/
+	margin: auto;
+	border-collapse : collapse;
+}
+
+#Principal table td { /*Case de tableau*/
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#Principal tr:nth-child(odd) { /*Cases impaires du tableau*/
+  background-color: whitesmoke;
+}
+
+#Principal tr:nth-child(even) { /*Cases paires du tableau*/
+  background-color: ghostwhite;
+}
+
+.image {  /*Conteneur d'image et texte*/
+	border-radius: 10px;
+	border-style: solid;
+	border-width: 3px;
+	height: 320px;
+	width: 250px;
+	background-color: white;
+	text-align: center;
+	font-size: 20px;
+	display: inline-block;
+	font-weight: bold;
+	margin-left: 20px;
+}
+.image:hover { /*Survolage de l'image ou du texte*/
+	color: gray;
+}
+.image p a { /*Lien en dessous de l'image*/
+	color: black;
+	text-decoration: none;
+}
+
+#MenuPrincipalC #Principal table { /*Tableau de contact*/
+	border-collapse : collapse;
+	margin-left: 0;
+	text-align: left;
+}
+
+#MenuPrincipalC #Principal table td { /*Case de tableau de contact*/
+	padding-left: 50px;
+	padding-right: 10px;
+	background-color: white;
+}
+
+textarea { /*Saisie du contenu du mail*/
+	margin-top: 8px;
+	resize: none;
+}
+/*--------------------------------------------------Footer--------------------------------------------------*/
+#Footer { /*Conteneur de la partie bas*/
+	background-color: black;
+	width: 100%;	
+	height:100px;
+	padding-top: 1px;
+	text-align: center;
+}
+
+#FCopy { /*Texte des copyrights*/
+	color: white;
+}
+
+.test {
+	text-decoration: underline;
+	color: white;
+}
+
+#FContact { /*Lien vers les contacts*/
+	text-decoration: underline;
+	color: white;
+}
+
