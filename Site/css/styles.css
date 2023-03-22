@@ -56,17 +56,21 @@ body {
 }
 
 /*--------------------------------------------------Menu--------------------------------------------------*/
+#MenuFooter { /*Conteneur de la partie centrale et du footer*/
+	display: flex;
+	flex-direction: column;
+}
+
 #MenuPrincipalI { /*Conteneur de la partie milieu index*/
-	height: 550px;
 	background-color: white;
 	border-top: 70px solid; /*Pour créer un espace d'écart*/
 	border-bottom: 70px solid;
 	border-color: white;
 	text-align: center;
+	padding-bottom: 50px;
 }
 
 #MenuPrincipalA { /*Conteneur de la partie milieu autres*/
-	height: 1350px;
 	background-color: white;
 	border-top: 70px solid; /*Pour créer un espace d'écart*/
 	border-bottom: 70px solid;
@@ -75,7 +79,6 @@ body {
 }
 
 #MenuPrincipalC { /*Conteneur de la partie milieu contact*/
-	height: 500px;
 	background-color: white;
 	border-top: 70px solid; /*Pour créer un espace d'écart*/
 	border-bottom: 70px solid;
@@ -150,12 +153,21 @@ body {
 	padding-right: 10px;
 }
 
+#Principal table th { /*Case de tableau première ligne*/
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
 #Principal tr:nth-child(odd) { /*Cases impaires du tableau*/
   background-color: whitesmoke;
 }
 
 #Principal tr:nth-child(even) { /*Cases paires du tableau*/
   background-color: ghostwhite;
+}
+
+#Principal table .stock {
+	display: none;
 }
 
 .image {  /*Conteneur d'image et texte*/
@@ -189,6 +201,17 @@ body {
 	padding-left: 50px;
 	padding-right: 10px;
 	background-color: white;
+	font-size: 20px;
+}
+
+#MenuPrincipalA input { /*Saisie de la quantité  voulue*/
+	margin-left: 7px;
+}
+
+#MenuPrincipalC #lMail {
+	font-size: 13px;
+	color: gray;
+	display: none;
 }
 
 textarea { /*Saisie du contenu du mail*/
