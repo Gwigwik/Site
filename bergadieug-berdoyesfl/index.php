@@ -1,7 +1,7 @@
 <?php
 	session_start();
 	include_once('varSession.inc.php');
-	include_once('bdd.php');
+	include_once('bdd/bdd.php');
 ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
