@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	include_once('varSession.inc.php');
+	include_once('bdd/bddData.php');
 	include_once('bdd/bdd.php');
 ?>
 <!DOCTYPE html>

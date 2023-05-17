@@ -13,7 +13,7 @@ CREATE TABLE Produits(type VARCHAR(50),
                       alt VARCHAR(50),
                       src VARCHAR(50),
                       onClick VARCHAR(50),
-                      description VARCHAR(50),
+                      description VARCHAR(100),
                       prix VARCHAR(50),
                       stockId VARCHAR(50),
                       stock INTEGER,
@@ -27,4 +27,4 @@ CREATE TABLE Produits(type VARCHAR(50),
                       FOREIGN KEY (type) REFERENCES Categories(nom));
 
 CREATE TABLE Clients(id VARCHAR(50) PRIMARY KEY,
-					 mdp VARCHAR(50));
+					 		mdp VARCHAR(50));

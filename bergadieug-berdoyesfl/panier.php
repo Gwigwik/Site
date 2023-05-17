@@ -1,8 +1,9 @@
 <?php
     session_start();
-    include_once('varSession.inc.php');
+	include_once('bdd/bddData.php');
+	include_once('bdd/bdd.php');
     $somme = 0;
-    foreach($produits as $produit) :
+    foreach($_SESSION['produits'] as $produit) :
 		if (isset($_POST[$produit['alt']])) {
 			$_SESSION[$produit['alt']] = 0;
 		}
@@ -32,7 +33,7 @@
                             <tr><th>Photo</th><th>Référence</th><th>Désignation</th><th>Quantité</th><th>Prix total</th><th>Somme : <?php echo $somme; ?>€</th></tr>
                         </thead>
                         <tbody>
-                            <?php foreach($produits as $produit) :
+                            <?php foreach($_SESSION['produits'] as $produit) :
                                 if (isset($_SESSION[$produit['alt']]) && $_SESSION[$produit['alt']]!=0) {
                                     echo '<form action="panier.php" method="post">';
                                     echo '<tr>';
@@ -49,7 +50,6 @@
                             endforeach ?>
                         </tbody>
 					</table>
-
 				</div>
 			</div>
 			<footer>

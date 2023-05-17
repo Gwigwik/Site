@@ -1,10 +1,11 @@
 <?php
 	session_start();
-	include_once('varSession.inc.php');
+	include_once('bdd/bddData.php');
+	include_once('bdd/bdd.php');
 	if (isset($_GET['deco'])) {
 		unset($_SESSION['id']);
 	}
-	foreach($utilisateurs as $user) :
+	foreach($_SESSION['utilisateurs'] as $user) :
 		if (isset($_POST['id']) && ($_POST['id']==$user['id']) && isset($_POST['mdp']) && ($_POST['mdp']==$user['mdp'])) {
 			$_SESSION['id'] = $user['id'];
 		}

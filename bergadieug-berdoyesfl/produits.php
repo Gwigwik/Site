@@ -1,7 +1,8 @@
 <?php
-	session_start(); 
-	include_once('varSession.inc.php');
-	foreach($produits as $produit) :
+	session_start();
+	include_once('bdd/bddData.php');
+	include_once('bdd/bdd.php');
+	foreach($_SESSION['produits'] as $produit) :
 		if (isset($_POST[$produit['alt']])) {
 			$_SESSION[$produit['alt']] = $_POST[$produit['alt']];
 		}
@@ -29,7 +30,7 @@
 							<tr><th>Photo</th><th>Référence</th><th>Désignation</th><th>Prix</th><th class=stock>Stock</th><th>Commande</th></tr>
 						</thead>
 						<tbody>
-							<?php foreach($produits as $produit) :
+							<?php foreach($_SESSION['produits'] as $produit) :
 								if ($produit['type'] == $_GET['cat']) {
 									echo '<form action="produits.php?cat='.$_GET['cat'].'" method="post">';
 									echo '<tr>';
@@ -58,4 +59,3 @@
 		</div>
 	</body>
 </html>
-

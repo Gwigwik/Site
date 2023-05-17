@@ -1,5 +1,4 @@
 <?php
-$connexion = [
-    'user' => 'aaaAAA111///'
-];
+$_SESSION['idBdd'] = 'user';
+$_SESSION['mdpBdd'] = 'aaaAAA111///';
 ?>
