@@ -151,18 +151,18 @@ function getXhr() {
 	return xhr;
 }
 
+//Ajout d'un produit au panier
 function ajouterPanier(inputId, stockId, alt) {
 	var xhr = getXhr();
 	// On définit que l'on va faire à chq changement d'état
 	xhr.onreadystatechange = function() {
-	   // On ne fait quelque chose que si on a tout reç̧u 
-	   // et que le serveur est ok
+	   // On ne fait quelque chose que si on a tout reç̧u et que le serveur est ok
 	   if (xhr.readyState == 4 && xhr.status == 200) {
 			stockId.textContent = parseInt(stockId.textContent) - inputId.value;
 		  	inputId.value = 0;
 	   }
 	}
-	// cas de la mé́thode post
+	
 	xhr.open('POST','modifPanier.php',true);
 	xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded;charset=utf-8');
 	xhr.send("stockId="+parseInt(stockId.textContent)+"&inputId="+inputId.value+"&alt="+alt);

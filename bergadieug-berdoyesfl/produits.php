@@ -2,12 +2,6 @@
 	session_start();
 	include_once('bdd/bddData.php');
 	include_once('bdd/bdd.php');
-	/*
-	foreach($_SESSION['produits'] as $produit) :
-		if (isset($_POST[$produit['alt']])) {
-			$_SESSION[$produit['alt']] = $_POST[$produit['alt']];
-		}
-	endforeach*/
 ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">

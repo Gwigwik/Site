@@ -26,7 +26,7 @@ function recuperation($conn, $table, $categorie) {
     else { return mysqli_query($conn, $req); }
 }
 
-$conn = connexion("localhost", $_SESSION['idBdd'], $_SESSION['mdpBdd'], "catcomp");
+$conn = connexion($_SESSION['hostname'], $_SESSION['idBdd'], $_SESSION['mdpBdd'], $_SESSION['database']);
 
 /*Remplissage de catcompdata.sql pour les produits
 $file = fopen("sql/catcompdata.sql", "w");

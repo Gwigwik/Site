@@ -1,2 +1,11 @@
+---Création de la base de données---
+Lancer mysql avec un compte déjà créé et effectuer les commandes suivantes :
+CREATE USER 'user'@'localhost' IDENTIFIED BY 'aaaAAA111///';
+GRANT ALL PRIVILEGES ON *.* TO 'user'@'localhost';
+Se déplacer dans bergadieug-berdoyesfl/sql et effectuer les 2 commandes suivantes :
+sudSOURCE catcomp.sql
+SOURCE catcompdata.sql
+
+faire un chmod 777 -R bergadieug-berdoyesfl
 Placer le dossier bergadieug-berdoyesfl dans www
 Aller à http://localhost/bergadieug-berdoyesfl/index.php
