@@ -35,7 +35,7 @@
                         <tbody>
                             <?php foreach($_SESSION['produits'] as $produit) :
                                 if (isset($_SESSION[$produit['alt']]) && $_SESSION[$produit['alt']]!=0) {
-                                    echo '<form action="panier.php" method="post">';
+                                    //echo '<form action="panier.php" method="post">';
                                     echo '<tr>';
                                     echo '<td><div id='.$produit['id'].' />';
                                     echo '<img alt='.$produit['alt'].' class="images"'.' src='.$produit['src'].' height="250" width="250"'.' onclick='.$produit['onClick'].' /></td>';
@@ -45,7 +45,7 @@
                                     echo '<td>'.$produit['prix']*$_SESSION[$produit['alt']].'€</td>';
                                     echo '<td><button type ="submit" name='.$produit['alt'].' type=button>Retirer</button></td>';
                                     echo '</tr>';
-									echo '</form>';
+									//echo '</form>';
                                 }
                             endforeach ?>
                         </tbody>

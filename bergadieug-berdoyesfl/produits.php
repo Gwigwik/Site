@@ -2,11 +2,12 @@
 	session_start();
 	include_once('bdd/bddData.php');
 	include_once('bdd/bdd.php');
+	/*
 	foreach($_SESSION['produits'] as $produit) :
 		if (isset($_POST[$produit['alt']])) {
 			$_SESSION[$produit['alt']] = $_POST[$produit['alt']];
 		}
-	endforeach
+	endforeach*/
 ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
@@ -32,7 +33,7 @@
 						<tbody>
 							<?php foreach($_SESSION['produits'] as $produit) :
 								if ($produit['type'] == $_GET['cat']) {
-									echo '<form action="produits.php?cat='.$_GET['cat'].'" method="post">';
+									//echo '<form action="produits.php?cat='.$_GET['cat'].'" method="post">';
 									echo '<tr>';
 									echo '<td><div id='.$produit['id'].' />';
 									echo '<img alt='.$produit['alt'].' class="images"'.' src='.$produit['src'].' height="250" width="250"'.' onclick='.$produit['onClick'].' /></td>';
@@ -43,9 +44,9 @@
 									echo '<td><button disabled id='.$produit['bMId'].' type=button onclick='.$produit['bMClick'].'>-</button>';
 									echo '<input type=text id='.$produit['inputId'].' size=1 value=0 name ='.$produit['alt'].' onInput='.$produit['onInput'].'>';
 									echo '<button id='.$produit['bPId'].' type=button onclick='.$produit['bPClick'].'>+</button></br></br>';
-									echo '<button type ="submit" id='.$produit['bE'].' type=button>Ajouter au panier</button></td>';
+									echo '<button './*type ="submit"*/' id='.$produit['bE'].' onclick=ajouterPanier('.$produit['inputId'].','.$produit['stockId'].') type=button>Ajouter au panier</button></td>';
 									echo '</tr>';
-									echo '</form>';
+									//echo '</form>';
 								}
 							endforeach ?>
 						</tbody>

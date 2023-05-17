@@ -133,3 +133,38 @@ function grandissement(id, grand, source) {
   }
 }
 
+//Création d'un objet XMLHTTPRequest
+function getXhr() {
+	var xhr = null;
+	if (window.XMLHttpRequest) //FF & autres
+	   xhr = new XMLHttpRequest();
+	else if (window.ActiveXObject) { //IE < 7
+		 try {
+		   xhr = new ActiveXObject("Msxml2.XMLHTTP");
+		 } catch (e) {
+		   xhr = new ActiveXObject("Microsoft.XMLHTTP");
+		 }
+	} else { //Objet non supporté par le navigateur
+	   alert("Votre navigateur ne supporte pas AJAX");
+	   xhr = false;
+	}
+	return xhr;
+}
+
+function ajouterPanier(alt, stockId) {
+	var xhr = getXhr();
+	// On définit que l'on va faire à chq changement d'état
+	xhr.onreadystatechange = function() {
+	   // On ne fait quelque chose que si on a tout reç̧u 
+	   // et que le serveur est ok
+	   if (xhr.readyState == 4 && xhr.status == 200){
+			// traitement ré́alisé avec la réponse...
+			stockId.textContent = parseInt(stockId.textContent) - alt.value;
+		  	alt.value = 0;
+	   }
+	}
+	// cas de la mé́thode post
+	xhr.open("POST","modifPanier.php",true) ;
+	xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded;charset=utf-8');
+	xhr.send("alt="+parseInt(stockId.textContent)+"stock="+alt.value);
+  }
